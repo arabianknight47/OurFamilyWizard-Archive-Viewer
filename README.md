@@ -31,12 +31,12 @@ The included archive is generated from `data/sample-ofw-message-report.pdf` and 
 
 First, export your message report from OurFamilyWizard:
 
-1. Go to the main Inbox in OurFamilyWizard.
-2. Use the main report button from the main inbox.
-3. Select all messages in the folder.
-4. Choose oldest to newest ordering.
-5. Check the option to include message replies.
-6. Download the generated PDF report.
+1. Go to the main Messages from the menu in OurFamilyWizard WebUI.
+2. Click on the All Messages menu in the side bar.
+3. Select the Report button at the top of the page.
+4. Check off 'Include message replies'
+5. Download your messages.
+6. Run the python importer using instructions below.
 
 Then run the importer:
 
