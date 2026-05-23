@@ -1,6 +1,6 @@
 # OurFamilyWizard Archive Viewer
 
-An offline, read-only viewer for OurFamilyWizard message report exports. It turns a downloaded message report PDF into a searchable, local archive that is easier to browse than a long PDF while still preserving a link back to the original source document.
+An offline, read-only viewer for OurFamilyWizard message report exports. This utalizes HTML/CSS/JS sctirckly and can be published online, although it's highly recommended to password protect this before publishing online through a .htpasswd or similar method. pIt turns a downloaded message report PDF into a searchable, local archive that is easier to browse than a long PDF while still preserving a link back to the original source document.
 
 This project exists because family messages can matter long after the moment they were sent. Sometimes they are needed for court, mediation, parenting coordination, or simply so a parent can preserve a clear record for themselves and for their children in the future. The goal is not to analyze, judge, or reinterpret the messages. The goal is to keep them readable, organized, and close to the original export.
 
@@ -61,6 +61,7 @@ The sample generator uses `reportlab`; the archive importer uses `pypdf`.
 - Favorite state is stored only in the browser where you use the app.
 - Names are preserved from the imported PDF so the archive remains useful as a record.
 - Review `data/messages.js` and any PDF files before publishing or sharing a customized archive.
+- Highly recommended to use .htpasswd or similar to password protect if publishing online.
 
 ## Development
 
