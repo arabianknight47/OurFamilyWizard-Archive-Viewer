@@ -1,14 +1,14 @@
 # OurFamilyWizard Archive Viewer
 
-An offline, read-only viewer for OurFamilyWizard message report exports.
+An offline, read-only viewer for OurFamilyWizard message report exports. It turns a downloaded message report PDF into a searchable, local archive that is easier to browse than a long PDF while still preserving a link back to the original source document.
 
-This project lets you keep a portable archive of your OurFamilyWizard messages as a simple static web app. It loads a parsed message report from `data/messages.js`, displays messages in an inbox-style thread list, supports search and favorites, and links back to the source PDF used to generate the archive.
+This project exists because family messages can matter long after the moment they were sent. Sometimes they are needed for court, mediation, parenting coordination, or simply so a parent can preserve a clear record for themselves and for their children in the future. The goal is not to analyze, judge, or reinterpret the messages. The goal is to keep them readable, organized, and close to the original export.
 
-The repository ships with a synthetic sample PDF and sample message data only. Do not publish private family, legal, or account data unless you have carefully reviewed what you are sharing.
+The repository ships with a synthetic sample PDF and sample message data only. Before sharing your own customized archive, review every file in `data/` and decide carefully whether the archive should stay private, password-protected, or local-only.
 
 ## Features
 
-- Static HTML/CSS/JavaScript app with no server required.
+- Static HTML/CSS/JavaScript app with no build step required.
 - Local-only message viewing; no analytics, tracking, or network calls.
 - Inbox, Sent, Favorites, and All Messages views.
 - Thread detail view with sender, recipient, sent time, viewed time, body, and source PDF page.
@@ -20,7 +20,7 @@ The repository ships with a synthetic sample PDF and sample message data only. D
 
 Open `index.html` in a browser.
 
-The included archive is generated from `data/sample-ofw-message-report.pdf` and contains fictional names and messages for demonstration.
+The included archive is generated from `data/sample-ofw-message-report.pdf` and contains fictional names and messages for demonstration. The sample is intentionally small so you can inspect the whole workflow quickly.
 
 ## Generate Your Own Archive
 
@@ -41,7 +41,7 @@ python tools\import_ofw_report.py "C:\Path\To\Your_OFW_Message_Report.pdf" --out
 
 Use `--sent-from` with the exact sender name as it appears in the PDF if you want the Sent folder to be classified. If you omit it, imported messages are still viewable, but they will be classified as Inbox by default.
 
-Copy your PDF into the `data` folder and update the archive link in `index.html` if you want the app to open your original PDF from the sidebar.
+Copy your PDF into the `data` folder and update the archive link in `index.html` if you want the app to open your original PDF from the sidebar. The footer names and date range are read from `data/messages.js`; they are not hard-coded.
 
 ## Regenerate The Included Sample
 
@@ -59,6 +59,7 @@ The sample generator uses `reportlab`; the archive importer uses `pypdf`.
 - The app runs locally in your browser.
 - It does not send message contents anywhere.
 - Favorite state is stored only in the browser where you use the app.
+- Names are preserved from the imported PDF so the archive remains useful as a record.
 - Review `data/messages.js` and any PDF files before publishing or sharing a customized archive.
 
 ## Development
