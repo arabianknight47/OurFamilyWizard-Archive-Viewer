@@ -2,6 +2,9 @@
 
 An offline, read-only viewer for OurFamilyWizard message report exports. This utilizes HTML/CSS/JS strictly  and can be published online, although it's highly recommended to password protect this before publishing online through a .htpasswd or similar method. pIt turns a downloaded message report PDF into a searchable, local archive that is easier to browse than a long PDF while still preserving a link back to the original source document.
 
+## Demo
+Demo Link: https://apps.k47.co/OFW_Archive/
+
 This project exists because family messages can matter long after the moment they were sent. Sometimes they are needed for court, mediation, parenting coordination, or simply so a parent can preserve a clear record for themselves and for their children in the future. The goal is not to analyze, judge, or reinterpret the messages. The goal is to keep them readable, organized, and close to the original export.
 
 The repository ships with a synthetic sample PDF and sample message data only. Before sharing your own customized archive, review every file in `data/` and decide carefully whether the archive should stay private, password-protected, or local-only.
