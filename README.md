@@ -1,6 +1,8 @@
 # OurFamilyWizard Archive Viewer
 
-An offline, read-only viewer for OurFamilyWizard message report exports. This utilizes HTML/CSS/JS strictly  and can be published online, although it's highly recommended to password protect this before publishing online through a .htpasswd or similar method. It turns a downloaded message report in PDF format, exported straight from the OurFamilyWizard Web UI, into a searchable, local archive that is easier to browse than a long PDF while still preserving a link back to the original source document.
+An offline, read-only viewer for OurFamilyWizard message report exports. This utilizes HTML/CSS/JS strictly, runs locally in the browser, and connects to no databases. Although this can be published online, it's highly recommended to password protect this before publishing online through a .htpasswd or similar method. This app does not come with password protection out of the box. 
+
+It turns a downloaded message report in PDF format, exported straight from the OurFamilyWizard Web UI, into a searchable, local archive that is easier to browse than a long PDF while still preserving a link back to the original source document.
 
 This project exists because family messages can matter long after the moment they were sent. Sometimes they are needed for court, mediation, parenting coordination, or simply so a parent can preserve a clear record for themselves and for their children in the future. The goal is not to analyze, judge, or reinterpret the messages. The goal is to keep them readable, organized, and close to the original export.
 
@@ -64,6 +66,7 @@ The sample generator uses `reportlab`; the archive importer uses `pypdf`.
 - Favorite state is stored only in the browser where you use the app. So clearing the cache will erase favorites.
 - Names are preserved from the imported PDF so the archive remains useful as a record.
 - Review `data/messages.js` and any PDF files before publishing or sharing a customized archive.
+- This does not include password protection built in.
 - Highly recommended to use .htpasswd or similar to password protect if publishing online.
 
 ## Limitations
