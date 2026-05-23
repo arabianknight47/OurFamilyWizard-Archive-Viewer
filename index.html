@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OurFamilyWizard Message Archive</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand" aria-label="OurFamilyWizard archive">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <path d="M32 5v54M8 19l48 26M56 19 8 45M17 10l30 44M47 10 17 54" />
+          </svg>
+        </div>
+        <div class="archive-title">OurFamilyWizard Archive</div>
+        <nav class="main-nav" aria-label="Primary">
+          <a class="active" href="#">Messages</a>
+        </nav>
+        <div class="profile-icon" aria-label="Default profile">
+          <span aria-hidden="true"></span>
+        </div>
+      </header>
+
+      <aside class="sidebar">
+        <button class="folder active" type="button" data-folder="Inbox">Inbox</button>
+        <button class="folder" type="button" data-folder="Favorites"><span>Favorites</span><span id="favoritesCount">0</span></button>
+        <button class="folder" type="button" data-folder="Sent">Sent</button>
+        <button class="folder" type="button" data-folder="All Messages">All Messages</button>
+        <a class="archive-file-link" href="data/sample-ofw-message-report.pdf" target="_blank" rel="noopener">
+          View Sample MSG Archive
+        </a>
+      </aside>
+
+      <main class="workspace">
+        <section id="inboxView" class="view active-view" aria-label="Message inbox">
+          <div class="inbox-toolbar">
+            <label class="search-box">
+              <span class="icon search-icon"></span>
+              <input id="searchInput" type="search" placeholder="Search Inbox...">
+            </label>
+            <div class="toolbar-spacer"></div>
+            <span id="archiveSummary" class="archive-summary"></span>
+          </div>
+
+          <div class="filter-line">
+            <div class="range-control">
+              <button id="prevPageBtn" type="button" class="range-arrow" disabled aria-label="Previous page">&lsaquo;</button>
+              <span id="rangeText">1 - 50</span>
+              <button id="nextPageBtn" type="button" class="range-arrow" aria-label="Next page">&rsaquo;</button>
+            </div>
+          </div>
+
+          <div class="message-table" role="table" aria-label="Message threads">
+            <div class="table-head" role="row">
+              <span class="check-box" aria-hidden="true"></span>
+              <span class="col-from">From</span>
+              <span class="col-attachment">File</span>
+              <span class="col-subject">Subject</span>
+              <span class="col-date">Date</span>
+            </div>
+            <div id="threadRows" class="thread-rows"></div>
+          </div>
+        </section>
+
+        <section id="detailView" class="view detail-view" aria-label="Message thread">
+          <div class="detail-toolbar">
+            <button id="backBtn" class="icon-button text-blue" type="button" title="Back to inbox">&lsaquo;</button>
+            <div class="toolbar-spacer"></div>
+            <button id="prevThreadBtn" class="icon-button" type="button" title="Previous thread">&lsaquo;</button>
+            <button id="nextThreadBtn" class="icon-button" type="button" title="Next thread">&rsaquo;</button>
+          </div>
+          <article id="threadDetail" class="thread-detail"></article>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span id="archiveFooterText">This is a local OurFamilyWizard message archive.</span>
+      </footer>
+    </div>
+
+    <script src="data/messages.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
