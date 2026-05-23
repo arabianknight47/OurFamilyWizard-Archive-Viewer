@@ -61,10 +61,14 @@ The sample generator uses `reportlab`; the archive importer uses `pypdf`.
 
 - The app runs locally in your browser.
 - It does not send message contents anywhere.
-- Favorite state is stored only in the browser where you use the app.
+- Favorite state is stored only in the browser where you use the app. So clearing the cache will erase favorites.
 - Names are preserved from the imported PDF so the archive remains useful as a record.
 - Review `data/messages.js` and any PDF files before publishing or sharing a customized archive.
 - Highly recommended to use .htpasswd or similar to password protect if publishing online.
+
+## Limitations
+
+Favorite state is stored only in the browser where you use the app. So clearing the browser cache, or using an incognito window will wipe your favorites.
 
 ## Development
 
